@@ -17,7 +17,7 @@ timeout(60) {
 
                     try {
 
-                        throw new Exception("test exception thrown")
+                        throw new Exception("Can you see me?!")
 
                         sh "npm test"
 
