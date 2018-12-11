@@ -22,8 +22,8 @@ timeout(60) {
                         sh "npm test"
 
                     } catch (exp) {
-                        currentBuild.result = 'UNSTABLE'
                         exp.printStackTrace()
+                        currentBuild.result = 'UNSTABLE'
                     }
                 } 
             }
