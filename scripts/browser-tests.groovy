@@ -24,7 +24,8 @@ timeout(60) {
                     } catch (exp) {
                         // echo exp.getMessage() // worked
                         // echo exp.getStackTrace() // does not work, it does not return string
-                        exp.printStackTrace()
+                        // exp.printStackTrace()
+                        println(exp.getStackTrace())
                         currentBuild.result = 'UNSTABLE'
                     }
                 } 
