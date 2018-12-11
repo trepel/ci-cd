@@ -22,7 +22,9 @@ timeout(60) {
                         sh "npm test"
 
                     } catch (exp) {
-                        echo exp.getStackTrace()
+                        // echo exp.getMessage() // worked
+                        // echo exp.getStackTrace() // does not work, it does not return string
+                        exp.printStackTrace()
                         currentBuild.result = 'UNSTABLE'
                     }
                 } 
