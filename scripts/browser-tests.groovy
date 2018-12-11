@@ -23,7 +23,7 @@ timeout(60) {
 
                     } catch (exp) {
                         currentBuild.result = 'UNSTABLE'
-                        throw exp
+                        exp.printStackTrace()
                     }
                 } 
             }
