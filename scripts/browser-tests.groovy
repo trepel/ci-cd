@@ -16,9 +16,10 @@ timeout(60) {
                     """
 
                     try {
-                        sh "npm test"
 
                         throw new Exception("test exception thrown")
+
+                        sh "npm test"
 
                     } catch (exp) {
                         currentBuild.result = 'UNSTABLE'
